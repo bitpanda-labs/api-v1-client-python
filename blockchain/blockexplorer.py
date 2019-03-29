@@ -322,7 +322,7 @@ class Xpub:
         self.final_balance = xpub['final_balance']
         self.change_index = xpub['change_index']
         self.account_index = xpub['account_index']
-        self.gap_limit = xpub['gap_limit']
+        self.gap_limit = xpup.get('gap_limit', None)
         self.transactions = [Transaction(tx) for tx in a['txs']]
 
 
